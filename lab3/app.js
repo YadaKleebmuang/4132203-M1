@@ -17,7 +17,7 @@
     }
     let result = add(5, 10);
 
-    let add2 = function (aa, bb) { // javascript ไม่มี type หรือไม่มีประเภทของตัวแปร
+    let add2 = function (aa, bb) { // javascript ไม่มี type หรือไม่มีประเภทของตัวแปรฮะ
         let cc = aa + bb;  
         console.log(cc);
     }
