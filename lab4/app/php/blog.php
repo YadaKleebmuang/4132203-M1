@@ -38,8 +38,9 @@ switch ($method) {
         break;
 
     case 'POST': // Insert new blog
-        $title = $_POST['title'] ?? null;
-        $post = $_POST['post'] ?? null;
+        $input = json_decode(file_get_contents('php://input'), true);
+        $title = $input['title'] ?? null;
+        $post = $input['post'] ?? null;
 
         if ($title && $post) {
             $stmt = $conn->prepare("INSERT INTO tb_blog (title, post, createAt) VALUES (?, ?, NOW())");
